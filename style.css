@@ -1,0 +1,258 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+body {
+   /* background-color: #2a721d; */
+   background: hsla(111, 59%, 28%, 1);
+   background: linear-gradient(225deg, hsla(111, 59%, 28%, 1) 25%, hsla(126, 59%, 10%, 1) 100%);
+   background: -moz-linear-gradient(
+      225deg,
+      hsla(111, 59%, 28%, 1) 25%,
+      hsla(126, 59%, 10%, 1) 100%
+   );
+   background: -webkit-linear-gradient(
+      225deg,
+      hsla(111, 59%, 28%, 1) 25%,
+      hsla(126, 59%, 10%, 1) 100%
+   );
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2A721D", endColorstr="#0A270D", GradientType=1);
+}
+
+.page1 {
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+}
+
+.btn {
+   display: inline-block;
+   width: fit-content;
+   padding: 12px 28px;
+   background: #1e5215;
+   border: 2px solid transparent;
+   border-radius: 4px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   color: whitesmoke;
+   letter-spacing: 0.4px;
+   font-weight: 600;
+   transition: 0.4s ease;
+   opacity: 0;
+   animation: logoAni 1s ease forwards;
+   animation-delay: 1.3s;
+}
+
+.btn:hover {
+   background: #1e5215;
+   color: rgb(31, 30, 30);
+}
+
+.container {
+   max-width: 1620px;
+   width: 90%;
+   margin: 0 auto;
+}
+
+.navbar {
+   display: flex;
+   text-align: center;
+   justify-content: space-between;
+   padding: 20px;
+}
+
+.logo {
+   font-size: 30px;
+   font-weight: 600;
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+   font-style: italic;
+   padding: 10px;
+   animation: logoAni 1s ease forwards;
+   color: whitesmoke;
+}
+
+.icon_cer {
+   width: 40px;
+   height: 40px;
+   position: relative;
+   left: 100px;
+   animation: H1Ani forwards 2s ease;
+}
+
+.nav {
+   padding: 10px;
+   z-index: 100;
+}
+
+.nav a {
+   text-decoration: none;
+   padding: 20px;
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+   font-style: italic;
+   font-size: 20px;
+   color: whitesmoke;
+   animation: NavliaAni forwards 3s ease;
+}
+
+.nav a:hover {
+   color: black;
+   transition: 0.6s;
+}
+
+.nav .active {
+   color: black;
+}
+
+header {
+   width: 100;
+   height: 85vh;
+   display: flex;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+.header-container {
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: center;
+   height: 100%;
+   justify-content: space-between;
+}
+
+.header-left {
+   max-width: 620px;
+   position: relative;
+}
+
+.header-left h1 {
+   font-size: 54px;
+   line-height: 1.2;
+   color: whitesmoke;
+   animation: H1Ani forwards 1s ease;
+   opacity: 0;
+   animation-delay: 1s;
+}
+
+.smok {
+   animation-name: spam1;
+   animation-duration: 2.5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+.header-left h3 {
+   font-size: 40px;
+   font-weight: 400;
+   color: whitesmoke;
+   margin-top: 0.5rem;
+   animation: H1Ani forwards 1s ease;
+   opacity: 0;
+   animation-delay: 0.8s;
+}
+
+.header-left p {
+   margin: 15px 0 30px;
+   line-height: 150%;
+   font-size: 16px;
+   animation: logoAni forwards 1s ease;
+   opacity: 0;
+   animation-delay: 0.6s;
+}
+
+.header-right {
+   animation: H1Ani forwards 3s ease;
+}
+
+/* .social-link {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.social-link ul {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+} */
+
+.social-link li a {
+   height: 40px;
+   width: 40px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid transparent;
+   /* transform: rotate(45deg);
+   transition: 0.4s ease; */
+   animation: socialAni forwards 2s ease;
+   animation-delay: calc(0.2s * var(--i));
+   opacity: 0;
+}
+
+.social-link li a i:hover {
+   color: black;
+   transition: 0.5s;
+   transform: scale(2);
+}
+
+.social-link li a i {
+   font-size: 20px;
+   color: whitesmoke;
+}
+
+@keyframes spam1 {
+   0% {
+      -webkit-text-stroke: 1.2px black;
+      color: transparent;
+   }
+   100% {
+      color: black;
+   }
+}
+
+@keyframes H1Ani {
+   0% {
+      transform: translateY(-100px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes logoAni {
+   0% {
+      transform: translateX(-100px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes NavliaAni {
+   0% {
+      transform: translateY(100px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes socialAni {
+   0% {
+      transform: translateX(100px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
